@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { getContractNFTs } from './utils';
 import NftCard from "./components/NftCard";
 
-const { Header, Content } = Layout;
+const { Header, Content } = Layout; // destructure Layout into Header and Content
 
 function App() {
   const [nfts, setNfts] = useState([]); // [nft1, nft2, nft3, ...]
   const [loading, setLoading] = useState(false); // true or false
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState(''); // search text input value 
 
 const handleSearch = async () => { // handle search button click
   if (!searchText) {
@@ -42,8 +42,8 @@ const handleSearch = async () => { // handle search button click
           <Input 
             style={{ width:500 }}
             placeholder="Enter NFT contract address"
-            value={searchText}
-            onChange={ (e) => setSearchText(e.target.value)}
+            value={searchText} // display searchText
+            onChange={ (e) => setSearchText(e.target.value)} // update searchText
           />
           <Button type="primary" onClick={handleSearch}>
           Search
