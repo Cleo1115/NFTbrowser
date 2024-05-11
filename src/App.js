@@ -1,62 +1,70 @@
-import { Button, Card, Input, Layout, List } from 'antd';
-import './App.css';
-import { useState } from 'react';
-import { getContractNFTs } from './utils';
+import { Button, Card, Input, Layout, List, message } from "antd";
+import { useState } from "react";
+import { getContractNFTs } from "./utils";
+import "./App.css";
 import NftCard from "./components/NftCard";
+import ContractTrades from "./components/ContractTrades";
 
-const { Header, Content } = Layout; // destructure Layout into Header and Content
+
+const { Header, Content } = Layout;
+
 
 function App() {
-  const [nfts, setNfts] = useState([]); // [nft1, nft2, nft3, ...]
-  const [loading, setLoading] = useState(false); // true or false
-  const [searchText, setSearchText] = useState(''); // search text input value 
+  const [nfts, setNfts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
-const handleSearch = async () => { // handle search button click
-  if (!searchText) {
-    return;
-  }
 
-  setLoading(true);
+  const handleSearch = async () => {
+    if (searchText === "") {
+      return;
+    }
 
-  try { // try to get NFTs from the contract
-    const data = await getContractNFTs(searchText); // { result: [nft1, nft2, nft3, ...] }
-    setNfts(data.result); 
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    setLoading(false);
-  }
-};
+
+    setLoading(true);
+
+
+    try {
+      const data = await getContractNFTs(searchText);
+      setNfts(data.result);
+    } catch (error) {
+      message.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
 
   return (
-    <Layout style={{ height:'100vh' }}>
+    <Layout style={{ height: "100vh" }}>
       <Header>
-        <div style={{ fontSize: 20, fontWeight: 600, color: 'white' }}>
-          NFT Explorer
+        <div style={{ fontSize: 16, fontWeight: 600, color: "white" }}>
+          NFT Browser
         </div>
       </Header>
-      <Content 
-        style={{ height: 'calc(100vh - 64px)', padding: 20, overflowY: 'auto'}}
+      <Content
+        style={{ height: "calc(100% - 64px)", padding: 20, overflowY: "auto" }}
       >
         <Input.Group compact>
-          <Input 
-            style={{ width:500 }}
-            placeholder="Enter NFT contract address"
-            value={searchText} // display searchText
-            onChange={ (e) => setSearchText(e.target.value)} // update searchText
+          <Input
+            style={{ width: 500 }}
+            placeholder="Enter a NFT contract address to search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
           />
           <Button type="primary" onClick={handleSearch}>
-          Search
+            Search
           </Button>
+          <ContractTrades tokenAddress={searchText} />
         </Input.Group>
-        <List 
-          style={{ 
+        <List
+          loading={loading}
+          style={{
             marginTop: 20,
-            // backgroundColor: 'white',
-            height: 'calc(100% - 52px)',
-            overflow: 'auto'
+            height: "calc(100% - 52px)",
+            overflow: "auto",
           }}
-          grid={{ 
+          grid={{
             gutter: 16,
             xs: 1,
             sm: 3,
@@ -66,13 +74,12 @@ const handleSearch = async () => { // handle search button click
             xxl: 4,
           }}
           dataSource={nfts}
-          renderItem={(nft) => {
-            return <NftCard nft={nft} />;
-          }}
+          renderItem={(nft) => <NftCard nft={nft} />}
         />
       </Content>
     </Layout>
   );
 }
+
 
 export default App;
