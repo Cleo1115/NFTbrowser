@@ -1,71 +1,41 @@
-# Getting Started with Create React App
+# NFT Price Visualization Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a dashboard for searching, viewing, and analyzing Non-Fungible Tokens (NFTs) using React, JavaScript, Ant Design, Recharts, and the Moralis API. It features a user-friendly interface that allows users to explore NFT data effectively.
 
-## Available Scripts
+## Features
+- **NFT Search**: Allows users to search for NFTs by contract address.
+- **Detailed Views**: Displays detailed information about each NFT, including images, names, and other metadata.
+- **Price and Trade Analytics**: Visualizes price trends and trade transactions using Recharts.
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+### NFT Browser
+<img width="1132" alt="Pasted Graphic 74" src="https://github.com/user-attachments/assets/fa9b8ff0-5a27-49b9-bed2-739901bccd65">
+<img width="1099" alt="image" src="https://github.com/user-attachments/assets/0c968708-a61f-4de0-bfe9-1ba19fe507ef">
+*The main interface of the NFT Browser displaying various NFTs, including 'Kanpai Panda' and 'Founder's Pirate'. Users can view different NFT collections and select specific NFTs to learn more about their details and trading history.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Transfer History
+<img width="1364" alt="Pasted Graphic 76" src="https://github.com/user-attachments/assets/3d3097ee-6093-430d-b395-0760253bffc9">
+*This view shows the transaction history for a specific NFT, listing all the transfers including the date, amount, and wallet addresses involved.*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Trade Chart
+<img width="1368" alt="Pasted Graphic 78" src="https://github.com/user-attachments/assets/f2d1c3a5-f884-4555-8719-15ff00846754">
+*An interactive chart showing the price trends of an NFT over time. It helps users analyze market behavior and price changes.*
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack and Skills
+- **Frontend Development**: Utilizing React and JavaScript for dynamic client-side functionalities.
+- **UI Design**: Leveraging Ant Design to create a responsive and intuitive user interface.
+- **Data Visualization**: Employing Recharts for crafting interactive and informative charts for data analysis.
+- **API Integration**: Using Moralis NFT API to fetch real-time data on NFTs, including prices, ownership, and metadata.
+- **State Management**: Efficiently managing the application state with React hooks and context.
+- **Performance Optimization**: Implementing best practices in performance tuning to ensure smooth user experiences even with large datasets.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# NFTbrowser
+## Skillsets
+- **React**: Component-based architecture, hooks for state and lifecycle management.
+- **JavaScript**: ES6+ syntax, asynchronous programming (Promises, async/await).
+- **Ant Design**: Use of various UI components like tables, forms, modals, etc.
+- **Recharts**: Integration of responsive charting solutions.
+- **Moralis API**: Handling API calls, data fetching, and processing.
+- **Performance Optimization**: Techniques to enhance front-end performance such as lazy loading, effective state management, and memoization.
