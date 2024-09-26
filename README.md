@@ -8,6 +8,18 @@ This project is a dashboard for searching, viewing, and analyzing Non-Fungible T
 - **Detailed Views**: Displays detailed information about each NFT, including images, names, and other metadata.
 - **Price and Trade Analytics**: Visualizes price trends and trade transactions using Recharts.
 
+## Technology Stack and Skills
+
+- **Frontend Development**: Using **React** and **JavaScript** for dynamic client-side functionalities, including state management with hooks and lifecycle optimization for responsive web applications.
+  
+- **UI Design**: Utilizing **Ant Design** to provide a clean, intuitive user interface, enhancing the user experience with well-structured UI components such as tables, forms, and modals.
+
+- **Data Visualization**: Employing **Recharts** for interactive charting, enabling sophisticated data visualizations that convey complex information about NFT market trends and pricing analytics effectively.
+
+- **API Integration**: Leveraging the **Moralis API** to fetch and handle real-time NFT data like prices, ownership details, and metadata, ensuring robust data integration and processing.
+
+- **Performance Optimization**: Implementing advanced performance optimization techniques including lazy loading and memoization, aimed at improving frontend performance and ensuring the application scales well with large datasets.
+
 ## Screenshots
 
 ### NFT Browser
@@ -23,14 +35,3 @@ This project is a dashboard for searching, viewing, and analyzing Non-Fungible T
 <img width="1368" alt="Pasted Graphic 78" src="https://github.com/user-attachments/assets/f2d1c3a5-f884-4555-8719-15ff00846754">
 *An interactive chart showing the price trends of an NFT over time. It helps users analyze market behavior and price changes.*
 
-## Technology Stack and Skills
-
-- **Frontend Development**: Using **React** and **JavaScript** for dynamic client-side functionalities, including state management with hooks and lifecycle optimization for responsive web applications.
-  
-- **UI Design**: Utilizing **Ant Design** to provide a clean, intuitive user interface, enhancing the user experience with well-structured UI components such as tables, forms, and modals.
-
-- **Data Visualization**: Employing **Recharts** for interactive charting, enabling sophisticated data visualizations that convey complex information about NFT market trends and pricing analytics effectively.
-
-- **API Integration**: Leveraging the **Moralis API** to fetch and handle real-time NFT data like prices, ownership details, and metadata, ensuring robust data integration and processing.
-
-- **Performance Optimization**: Implementing advanced performance optimization techniques including lazy loading and memoization, aimed at improving frontend performance and ensuring the application scales well with large datasets.
