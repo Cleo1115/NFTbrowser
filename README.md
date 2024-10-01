@@ -1,4 +1,4 @@
-# NFT Price Visualization Tool
+# NFT Browser -- Price Visualization Tool
 
 ## Overview
 This project is a dashboard for searching, viewing, and analyzing Non-Fungible Tokens (NFTs) using React, JavaScript, Ant Design, Recharts, and the Moralis API. It features a user-friendly interface that allows users to explore NFT data effectively.
